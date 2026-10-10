@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Compass | ATBU</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+            <img src="{{ url_for('static', filename='images/atbu_logo.png') }}"
+                 alt="ATBU Logo">
+
+            <span>Course Compass</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='images/atbu_logo.png') }}"
+                     alt="Abubakar Tafawa Balewa University Logo">
+            </div>
+
+            <p class="university">
+                ABUBAKAR TAFAWA BALEWA UNIVERSITY
+            </p>
+
+            <h1>
+                Find Your Direction<br>
+                <span>with Course Compass</span>
+            </h1>
+
+            <p class="hero-text">
+                Not sure which course is right for you?
+                Course Compass helps you explore suitable courses
+                based on your interests, subjects, strengths,
+                personality and career goals.
+            </p>
+
+            <a href="/chat" class="start-button">
+                Start Recommendation
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-container">
+
+            <h2>What is Course Compass?</h2>
+
+            <p>
+                Course Compass is a course recommendation system
+                designed to help students make informed decisions
+                about the courses they may want to study at
+                Abubakar Tafawa Balewa University.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🎯</div>
+
+                    <h3>Personalized</h3>
+
+                    <p>
+                        Recommendations are based on your
+                        interests, subjects, skills and goals.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">💬</div>
+
+                    <h3>Conversational</h3>
+
+                    <p>
+                        Simply answer questions naturally
+                        and let Course Compass learn about you.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">📚</div>
+
+                    <h3>Course Information</h3>
+
+                    <p>
+                        View course descriptions, careers,
+                        degree information and other details.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Course Compass
+        </p>
+
+        <p>
+            Abubakar Tafawa Balewa University
+        </p>
+
+    </footer>
+
+</body>
+</html>

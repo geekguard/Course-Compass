@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.idea/instance/
+*.py[cod]
+.venv*/
+/instance/
+quality_check_results.txt

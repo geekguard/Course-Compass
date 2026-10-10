@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Course Compass | Your Recommendations
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body class="results-page">
+
+
+<!-- ======================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <img
+            src="{{ url_for('static', filename='images/atbu_logo.png') }}"
+            alt="ATBU Logo"
+        >
+
+        <span>
+            Course Compass
+        </span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="/chat">
+            Back to Chat
+        </a>
+
+        <a href="/restart">
+            Start Again
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ======================================================
+     RESULTS HEADER
+====================================================== -->
+
+<header class="results-header">
+
+    <h1>
+        Your Course Compass Results
+    </h1>
+
+    <p>
+        Here are the ATBU programmes that best match
+        the information you shared.
+    </p>
+
+</header>
+
+
+<main class="results-container">
+
+
+<!-- ======================================================
+     STUDENT PROFILE
+====================================================== -->
+
+<section class="profile-card">
+
+    <div class="profile-heading">
+
+        <div>
+
+            <h2>
+                {% if profile.name %}
+                    {{ profile.name }}'s Profile
+                {% else %}
+                    Your Profile
+                {% endif %}
+            </h2>
+
+            <p>
+                Information used by Course Compass
+            </p>
+
+        </div>
+
+
+        <div class="confidence-box">
+
+            <span>
+                Profile Confidence
+            </span>
+
+            <strong>
+                {{ profile.confidence_score }}%
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile-grid">
+
+
+        {% if profile.interests %}
+
+        <div class="profile-item">
+
+            <h3>
+                Interests
+            </h3>
+
+            <p>
+                {% for item in profile.interests %}
+                    {{ item.title() }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if profile.favourite_subjects %}
+
+        <div class="profile-item">
+
+            <h3>
+                Favourite Subjects
+            </h3>
+
+            <p>
+                {% for item in profile.favourite_subjects %}
+                    {{ item.title() }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if profile.skills %}
+
+        <div class="profile-item">
+
+            <h3>
+                Skills
+            </h3>
+
+            <p>
+                {% for item in profile.skills %}
+                    {{ item.title() }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if profile.personality_traits %}
+
+        <div class="profile-item">
+
+            <h3>
+                Personality
+            </h3>
+
+            <p>
+                {% for item in profile.personality_traits %}
+                    {{ item.title() }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if profile.career_goals %}
+
+        <div class="profile-item">
+
+            <h3>
+                Career Goals
+            </h3>
+
+            <p>
+                {% for item in profile.career_goals %}
+                    {{ item.title() }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if profile.jamb_score > 0 %}
+
+        <div class="profile-item">
+
+            <h3>
+                JAMB Score
+            </h3>
+
+            <p>
+                {{ profile.jamb_score }}
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     RECOMMENDATIONS
+====================================================== -->
+
+<section class="recommendations-section">
+
+    <div class="section-heading">
+
+        <h2>
+            Recommended Programmes
+        </h2>
+
+        <p>
+            Your strongest matches are shown first.
+        </p>
+
+    </div>
+
+
+    {% if recommendations %}
+
+
+        {% for recommendation in recommendations %}
+
+        {% set course = recommendation.course %}
+
+
+        <article class="course-card">
+
+
+            <!-- COURSE HEADER -->
+
+            <div class="course-top">
+
+                <div>
+
+                    <span class="course-number">
+                        {{ loop.index }}
+                    </span>
+
+                    <h2>
+                        {{ course.name }}
+                    </h2>
+
+                </div>
+
+
+                <div class="match-score">
+
+                    <strong>
+                        {{ recommendation.percentage }}%
+                    </strong>
+
+                    <span>
+                        Match
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE DETAILS -->
+
+            <div class="course-details">
+
+
+                {% if course.degree %}
+
+                <div>
+                    <strong>
+                        Degree
+                    </strong>
+
+                    <span>
+                        {{ course.degree }}
+                    </span>
+                </div>
+
+                {% endif %}
+
+
+                {% if course.duration %}
+
+                <div>
+                    <strong>
+                        Duration
+                    </strong>
+
+                    <span>
+                        {{ course.duration }}
+                    </span>
+                </div>
+
+                {% endif %}
+
+
+                {% if course.faculty %}
+
+                <div>
+                    <strong>
+                        Faculty
+                    </strong>
+
+                    <span>
+                        {{ course.faculty }}
+                    </span>
+                </div>
+
+                {% endif %}
+
+
+                {% if course.department %}
+
+                <div>
+                    <strong>
+                        Department
+                    </strong>
+
+                    <span>
+                        {{ course.department }}
+                    </span>
+                </div>
+
+                {% endif %}
+
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            {% if course.description %}
+
+            <div class="course-description">
+
+                <h3>
+                    About this programme
+                </h3>
+
+                <p>
+                    {{ course.description }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- JAMB SUBJECTS -->
+
+            {% if course.jamb_subjects %}
+
+            <div class="course-section">
+
+                <h3>
+                    UTME/JAMB Subject Combination
+                </h3>
+
+                <p>
+
+                    {% for subject in course.jamb_subjects %}
+
+                        {{ subject.title() }}
+
+                        {% if not loop.last %}
+                            •
+                        {% endif %}
+
+                    {% endfor %}
+
+                </p>
+
+                <small>
+                    Please verify current JAMB requirements
+                    before registration.
+                </small>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- WHY THIS COURSE -->
+
+            <div class="course-section">
+
+                <h3>
+                    Why Course Compass recommends it
+                </h3>
+
+
+                <ul>
+
+                    {% for reason in recommendation.reasons %}
+
+                    <li>
+                        {{ reason }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+
+            <!-- CAREER OPPORTUNITIES -->
+
+            {% if course.careers %}
+
+            <div class="course-section">
+
+                <h3>
+                    Career Opportunities
+                </h3>
+
+
+                <div class="career-list">
+
+                    {% for career in course.careers %}
+
+                    <span>
+                        {{ career.title() }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+        </article>
+
+        {% endfor %}
+
+
+    {% else %}
+
+        <div class="empty-results">
+
+            <h2>
+                No strong matches found
+            </h2>
+
+            <p>
+                Try adding more information about your
+                interests, subjects, skills or career goals.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</section>
+
+
+<!-- ======================================================
+     BOTTOM BUTTONS
+====================================================== -->
+
+<div class="results-actions">
+
+    <a
+        href="/chat"
+        class="secondary-button"
+    >
+        ← Add More Information
+    </a>
+
+
+    <a
+        href="/restart"
+        class="primary-button"
+    >
+        Start Again
+    </a>
+
+</div>
+
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <p>
+        Course Compass • Abubakar Tafawa Balewa University
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

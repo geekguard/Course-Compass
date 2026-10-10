@@ -1,0 +1,1208 @@
+/* =====================================================
+   COURSE COMPASS
+   Main Website Styles
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #17233c;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.navbar {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: white;
+
+    border-bottom: 3px solid #f4c400;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #003b71;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #003b71;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #d99f00;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: #003b71;
+}
+
+.hero-content {
+    max-width: 800px;
+
+    color: white;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 8px;
+}
+
+.university {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #f4c400;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f4c400;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #e9f1f8;
+}
+
+.start-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    background: #f4c400;
+
+    color: #003b71;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 7px;
+
+    transition: 0.2s;
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+
+    background: #ffd633;
+}
+
+
+/* =====================================================
+   ABOUT SECTION
+   ===================================================== */
+
+.about {
+    padding: 80px 20px;
+
+    background: white;
+}
+
+.about-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 34px;
+
+    color: #003b71;
+
+    margin-bottom: 20px;
+}
+
+.about-container > p {
+    max-width: 750px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   FEATURE CARDS
+   ===================================================== */
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: #f5f8fc;
+
+    border-radius: 10px;
+
+    border-top: 4px solid #f4c400;
+
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #003b71;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #003b71;
+
+    color: white;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .brand img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 50px 20px;
+    }
+
+    .logo-container img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .university {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONE SCREENS
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .start-button {
+        padding: 14px 24px;
+    }
+}
+
+/* =====================================================
+   COURSE COMPASS CHAT PAGE
+   ===================================================== */
+
+.chat-page {
+    background: #f5f8fc;
+}
+
+
+/* =====================================================
+   CHAT WRAPPER
+   ===================================================== */
+
+.chat-wrapper {
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: calc(100vh - 110px);
+
+    margin: 25px auto;
+
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   CHAT HEADER
+   ===================================================== */
+
+.chat-header {
+
+    min-height: 75px;
+
+    padding: 15px 25px;
+
+    background: #003b71;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 3px solid #f4c400;
+}
+
+
+.chat-header h1 {
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.chat-header p {
+
+    color: #f4c400;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   CHAT BOX
+   ===================================================== */
+
+.chat-box {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    background: #f5f8fc;
+
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================
+   MESSAGE ROW
+   ===================================================== */
+
+.message-row {
+
+    display: flex;
+
+    width: 100%;
+
+    margin-bottom: 15px;
+}
+
+
+.message-row.bot {
+
+    justify-content: flex-start;
+
+}
+
+
+.message-row.user {
+
+    justify-content: flex-end;
+
+}
+
+
+/* =====================================================
+   MESSAGE BUBBLE
+   ===================================================== */
+
+.message-bubble {
+
+    max-width: 70%;
+
+    padding: 13px 17px;
+
+    border-radius: 15px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+
+    white-space: pre-line;
+}
+
+
+/* Bot */
+
+.message-row.bot .message-bubble {
+
+    background: white;
+
+    color: #17233c;
+
+    border: 1px solid #e1e6ec;
+
+    border-top-left-radius: 4px;
+}
+
+
+/* Student */
+
+.message-row.user .message-bubble {
+
+    background: #003b71;
+
+    color: white;
+
+    border-top-right-radius: 4px;
+}
+
+
+/* =====================================================
+   INPUT AREA
+   ===================================================== */
+
+.input-area {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px 20px;
+
+    background: white;
+
+    border-top: 1px solid #e1e6ec;
+}
+
+
+.input-area input {
+
+    flex: 1;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d5dbe2;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.input-area input:focus {
+
+    border-color: #003b71;
+
+}
+
+
+.input-area button {
+
+    width: 55px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #003b71;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.input-area button:hover {
+
+    background: #00549c;
+
+}
+
+
+.input-area button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =====================================================
+   RESULTS BUTTON
+   ===================================================== */
+
+.results-button {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 20px auto;
+
+    padding: 13px 25px;
+
+    background: #f4c400;
+
+    color: #003b71;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+
+.results-button:hover {
+
+    background: #ffd633;
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .chat-wrapper {
+
+        width: 100%;
+
+        height: calc(100vh - 75px);
+
+        margin: 0;
+
+        border-radius: 0;
+
+    }
+
+
+    .chat-header {
+
+        padding: 15px 18px;
+
+    }
+
+
+    .chat-box {
+
+        padding: 15px;
+
+    }
+
+
+    .message-bubble {
+
+        max-width: 85%;
+
+        font-size: 14px;
+
+    }
+
+
+    .input-area {
+
+        padding: 10px;
+
+    }
+
+
+    .input-area input {
+
+        height: 45px;
+
+    }
+
+
+    .input-area button {
+
+        width: 48px;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   COURSE COMPASS RESULTS PAGE
+========================================================== */
+
+.results-page {
+    background: #f5f8fc;
+    color: #17233c;
+}
+
+
+/* ==========================================================
+   RESULTS HEADER
+========================================================== */
+
+.results-header {
+    background: #003b71;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 4px solid #f4c400;
+}
+
+.results-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.results-header p {
+    margin: 0;
+    color: #f4c400;
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   RESULTS CONTAINER
+========================================================== */
+
+.results-container {
+    width: min(1000px, 92%);
+    margin: 30px auto;
+}
+
+
+/* ==========================================================
+   PROFILE CARD
+========================================================== */
+
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #dfe5ed;
+    box-shadow: 0 5px 18px rgba(0, 59, 113, 0.08);
+}
+
+
+.profile-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #e3e8ef;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+}
+
+
+.profile-heading h2 {
+    margin: 0 0 5px;
+    color: #003b71;
+}
+
+
+.profile-heading p {
+    margin: 0;
+    color: #6b7280;
+}
+
+
+.confidence-box {
+    background: #003b71;
+    color: white;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-align: center;
+    min-width: 130px;
+}
+
+
+.confidence-box span {
+    display: block;
+    font-size: 12px;
+}
+
+
+.confidence-box strong {
+    display: block;
+    color: #f4c400;
+    font-size: 25px;
+    margin-top: 3px;
+}
+
+
+/* ==========================================================
+   PROFILE GRID
+========================================================== */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.profile-item {
+    background: #f5f8fc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.profile-item h3 {
+    margin: 0 0 6px;
+    color: #003b71;
+    font-size: 14px;
+}
+
+
+.profile-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   SECTION HEADING
+========================================================== */
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 5px;
+    color: #003b71;
+}
+
+
+.section-heading p {
+    margin-top: 0;
+    color: #6b7280;
+}
+
+
+/* ==========================================================
+   COURSE CARD
+========================================================== */
+
+.course-card {
+    background: white;
+    border-radius: 17px;
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #dfe5ed;
+    box-shadow: 0 5px 18px rgba(0, 59, 113, 0.08);
+}
+
+
+/* ==========================================================
+   COURSE TOP
+========================================================== */
+
+.course-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #e3e8ef;
+    padding-bottom: 18px;
+}
+
+
+.course-top h2 {
+    display: inline;
+    margin: 0;
+    color: #003b71;
+    font-size: 21px;
+}
+
+
+.course-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+    background: #f4c400;
+    color: #003b71;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   MATCH SCORE
+========================================================== */
+
+.match-score {
+    background: #003b71;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 85px;
+}
+
+
+.match-score strong {
+    display: block;
+    color: #f4c400;
+    font-size: 23px;
+}
+
+
+.match-score span {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   COURSE DETAILS
+========================================================== */
+
+.course-details {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+
+
+.course-details div {
+    background: #f5f8fc;
+    padding: 12px;
+    border-radius: 9px;
+}
+
+
+.course-details strong {
+    display: block;
+    color: #003b71;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+
+.course-details span {
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   COURSE DESCRIPTION
+========================================================== */
+
+.course-description {
+    margin: 20px 0;
+}
+
+
+.course-description h3,
+.course-section h3 {
+    color: #003b71;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+.course-description p {
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+
+/* ==========================================================
+   COURSE SECTIONS
+========================================================== */
+
+.course-section {
+    border-top: 1px solid #e3e8ef;
+    padding-top: 18px;
+    margin-top: 18px;
+}
+
+
+.course-section p {
+    line-height: 1.7;
+}
+
+
+.course-section ul {
+    padding-left: 22px;
+}
+
+
+.course-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+.course-section small {
+    display: block;
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+
+/* ==========================================================
+   CAREERS
+========================================================== */
+
+.career-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.career-list span {
+    background: #f5f8fc;
+    border: 1px solid #dfe5ed;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   EMPTY RESULTS
+========================================================== */
+
+.empty-results {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #dfe5ed;
+}
+
+
+.empty-results h2 {
+    color: #003b71;
+}
+
+
+/* ==========================================================
+   RESULTS BUTTONS
+========================================================== */
+
+.results-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.primary-button {
+    background: #003b71;
+    color: white;
+}
+
+
+.primary-button:hover {
+    background: #005395;
+}
+
+
+.secondary-button {
+    background: white;
+    color: #003b71;
+    border: 1px solid #f4c400;
+}
+
+
+.secondary-button:hover {
+    background: #fff9d9;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.results-page footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .results-header h1 {
+        font-size: 25px;
+    }
+
+
+    .profile-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .course-top {
+        flex-direction: column;
+    }
+
+
+    .course-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .results-actions {
+        flex-direction: column;
+    }
+
+}

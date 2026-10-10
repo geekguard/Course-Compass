@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Course Compass | Chat</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body class="chat-page">
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <img
+                src="{{ url_for('static', filename='images/atbu_logo.png') }}"
+                alt="ATBU Logo"
+            >
+
+            <span>Course Compass</span>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/restart">Restart</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CHAT SECTION
+         ===================================================== -->
+
+    <main class="chat-wrapper">
+
+
+        <div class="chat-header">
+
+            <div>
+
+                <h1>Course Compass</h1>
+
+                <p>
+                    Let's find your direction
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CHAT MESSAGES
+             ================================================= -->
+
+        <div id="chatBox"
+             class="chat-box">
+
+            {% for message in messages %}
+
+                <div class="message-row {{ message.sender }}">
+
+                    <div class="message-bubble">
+
+                        {{ message.text }}
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+
+        <!-- =================================================
+             INPUT
+             ================================================= -->
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="message"
+                placeholder="Tell Course Compass about yourself..."
+                autocomplete="off"
+            >
+
+            <button
+                id="sendBtn"
+                type="button"
+            >
+                ➤
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
